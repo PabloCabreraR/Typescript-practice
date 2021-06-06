@@ -11,8 +11,16 @@ function substract(a:number, b:number):number{
 }
 
 function showConsole():void{
-    console.log(addition, substraction, multiplication)
+    console.log(addition)
+    console.log(substraction)
+    console.log(multiplication)
+    sayHello("Pablo", 27)
 }
+
+const sayHello = (name:string, age:number = 25):void => {
+    console.log(`Hello ${name}, you are ${age} years old.`)
+}
+
 
 let addition:number = add(2,7)
 let substraction:number = substract(10,8)
