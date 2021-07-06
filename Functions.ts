@@ -1,4 +1,4 @@
-function add(a:number, b:number):number{
+function sum(a:number, b:number):number{
     return a + b
 }
 
@@ -22,7 +22,7 @@ const sayHello = (name:string, age:number = 25):void => {
 }
 
 
-let addition:number = add(2,7)
+let addition:number = sum(2,7)
 let substraction:number = substract(10,8)
 let multiplication:number = product(5,5)
 
