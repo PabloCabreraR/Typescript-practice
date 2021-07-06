@@ -7,16 +7,25 @@
 // }
 
 
-const person: {
-    name: string
-    age: number
-    hobbies: string[]
-    role: [number, string] // Tuple, fixed length and fixed types.
-} = {
+// const person: {
+//     name: string
+//     age: number
+//     hobbies: string[]
+//     role: [number, string] // Tuple, fixed length and fixed types.
+// } = {
+//     name: "Pablo",
+//     age: 27,
+//     hobbies: ["Sports", "Cookies"],
+//     role: [2, 'author']
+// }
+
+enum Role {ADMIN = 2, READ_ONLY, AUTHOR}
+
+const person = {
     name: "Pablo",
     age: 27,
     hobbies: ["Sports", "Cookies"],
-    role: [2, 'author']
+    role: Role.ADMIN
 }
 
 console.log(person.name)
