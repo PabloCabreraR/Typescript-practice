@@ -1,21 +1,11 @@
-function combine(input1, input2, resultConversion) {
-    var result;
-    if (typeof input1 === 'number' && typeof input2 === 'number' || resultConversion === "as-number") {
-        result = +input1 + +input2;
-    }
-    else {
-        result = input1.toString() + input2.toString();
-    }
-    return result;
-    // if (resultConversion === "as-number"){
-    //     return +result
-    // } else {
-    //     return result.toString()
-    // }
+function add(n1, n2) {
+    return n1 + n2;
 }
-var combinesAges = combine(30, 27, "as-number");
-console.log(combinesAges);
-var combinesNames = combine('Pablo', "Ana", "as-text");
-console.log(combinesNames);
-var combinesStringAges = combine('30', "27", "as-number");
-console.log(combinesStringAges);
+function printResult(num) {
+    console.log("Result " + num);
+}
+// function printResult(num: number): undefined {
+//     console.log("Result " + num)
+//     return
+// }
+printResult(add(5, 12));
