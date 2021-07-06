@@ -1,41 +1,14 @@
-// const person: {
-//     name: string
-//     age: number
-// } = {
-//     name: "Pablo",
-//     age: 27,
-// }
-
-
-// const person: {
-//     name: string
-//     age: number
-//     hobbies: string[]
-//     role: [number, string] // Tuple, fixed length and fixed types.
-// } = {
-//     name: "Pablo",
-//     age: 27,
-//     hobbies: ["Sports", "Cookies"],
-//     role: [2, 'author']
-// }
-
-enum Role {ADMIN = 2, READ_ONLY, AUTHOR}
-
-const person = {
-    name: "Pablo",
-    age: 27,
-    hobbies: ["Sports", "Cookies"],
-    role: Role.ADMIN
+function combine(input1:number | string,input2:number | string) {
+    let result
+    if (typeof input1 === 'number' && typeof input2 === 'number'){
+        result = input1 + input2
+    } else {
+        result = input1.toString() + input2.toString()
+    }
+    return result
 }
 
-console.log(person.name)
+const combinesAges = combine(30, 27)
+console.log(combinesAges)
 
-let favouriteActivities: string[]
-favouriteActivities = ["Sports"]
-
-let recipes: any[]
-recipes = ["Pasta", 23]
-
-for (const hobby of person.hobbies){
-    console.log(hobby.toUpperCase())
-}
+const combinesNames = combine('Pablo', "Ana")
